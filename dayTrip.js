@@ -31,46 +31,76 @@ function getallWorkAndNoPlay()
 }
 
 
-
 function repickItem()
 {
     userInput = prompt("Do you like your current choices? If not, enter No, If Yes, enter Yes.")
         let decision = ["No", "yes"];
-            for(let i= 0; i < 1; i++){
-                console.log(i);
-                while(decision === 0){
-                    choicesChoices()
-                }
+    if(userInput == "No"){
+        choicesChoices()
+    } 
+    else if(userInput == "Yes"){
+        vacationApproval()
     }
-
-}        
+} 
 
 
 function choicesChoices()
 {
-    userInput = prompt("Select which part of the day trip you would like to Change.")
-        let selectItem = ["Destination", "Restaraunt", "Transportation", "Entertainment"]
-            for(let i = 0; i < 3; i++);
-                while(selectItem === i){
-                    getdestination
-                };
-                while(selectItem === i + 1){
-                    getrestaraunt
-                };
-                while(selectItem === i + 2){
-                    gettransport
-                };
-                while(selectItem === i + 3)
-                {
-                    getallWorkAndNoPlay
-                };
+    userInput = prompt("Select which part of the day trip you would like to Change.Type Destination, Restaraunt, Transportation, or Entertainment into the box below to change your pick for that particular part of your trip.")
+        let selectItem = ["Destination", "Restaraunt", "Transportation", "Entertainment"];
+            if(userInput == "Destination"){
+                getdestination()
+            }
+            else if(userInput == "Restaraunt"){
+                getrestaraunt()
+            }
+            else if(userInput == "Transportation"){
+                gettransport()
+            }
+            else if(userInput == "Entertainment"){
+                getallWorkAndNoPlay()
+            }
+            break userInput;}
             
+    
+
+
+    function vacationApproval()
+    {
+    userInput = prompt("Would you like to confirm the provided travel plans? Please type Yes or No in the text box below.");
+    let decision = ["No", "yes"];
+            if(userInput == "No"){
+                choicesChoices()
+           }
+            else if(userInput == "Yes"){
+                tripConformation()
+           }
         }
 
+
+function tripConformation()
 {
+userInput = prompt("Would you like to see an itenarary of your scheduled plans? If so, enter Yes into the text box below. If not, enter No into the box below to exit the program.");
+let decision = ["No", "Yes"];
+            if(userInput == "No"){
+                        itenararyDisplay()
+                }
+                    else if(userInput == "Yes"){
+                        alert("Thank you for choosing devCodeCamp Travel Services! Goodbye! ;-)")
+                }
+            }
+        
+
+
+function itenararyDisplay()
+{
+   alert("This is your current scheduled trip selection");
+       console.logresult(getdestination,getrestaraunt, gettransport, getallWorkAndNoPlay)}
+       
+     
 getdestination();
 getrestaraunt();
 gettransport();
 getallWorkAndNoPlay();
 repickItem();
-}
+choicesChoices()

@@ -1,33 +1,38 @@
-function getdestination()
+function getDestination()
 {
     userInput = prompt("Press enter to see your destination pick.")
         let destinationChoice = ["Miami", "Seattle",  "New York", "San Diego"];
-            let place = destinationChoice [Math.floor(Math.random() * destinationChoice.length)];
-                console.log(place);
+            let place = destinationChoice [Math.floor(Math.random() * destinationChoice.length)];    
+            console.log(place);
+            const key = "place";
 }
 
-function getrestaraunt()
+function getRestaraunt()
 {
     userInput = prompt("Press enter to see your restaraunt pick.")
         let restarauntChoice = ["Italian", "French",  "Japanese", "Spanish"];
             let restaraunt = restarauntChoice [Math.floor(Math.random() * restarauntChoice.length)];
                 console.log(restaraunt);
+                const key = "restaraunt";
+
 }
 
-function gettransport()
+function getTransport()
 {
     userInput = prompt("Press enter to see your mode of transportation.")
         let transportationChoice= ["Drive your car", "Fly on an airplane",  "Float on a boat", "ride the choo choo train"];
             let transport = transportationChoice [Math.floor(Math.random() * transportationChoice.length)];
                  console.log(transport);
+                 const key = "transport";
 }
 
 function getallWorkAndNoPlay()
 {
     userInput = prompt("Press enter to see the Entertainment scheduled for your trip.")
-        let EntertainmentChoice = ["Skydive", "Bunjee Jump",  "Visit a famous landmark", "Camp in nature", "Netflix and chill"];
-            let allWorkAndNoPlay = EntertainmentChoice [Math.floor(Math.random() * EntertainmentChoice.length)];
+        let entertainmentChoice = ["Skydive", "Bunjee Jump",  "Visit a famous landmark", "Camp in nature", "Netflix and chill"];
+            let allWorkAndNoPlay = entertainmentChoice [Math.floor(Math.random() * entertainmentChoice.length)];
                 console.log(allWorkAndNoPlay);
+                const key = "allWorkandNoPlay";
 }
 
 
@@ -49,18 +54,18 @@ function choicesChoices()
     userInput = prompt("Select which part of the day trip you would like to Change.Type Destination, Restaraunt, Transportation, or Entertainment into the box below to change your pick for that particular part of your trip.")
         let selectItem = ["Destination", "Restaraunt", "Transportation", "Entertainment"];
             if(userInput == "Destination"){
-                getdestination()
+                getDestination()
             }
             else if(userInput == "Restaraunt"){
-                getrestaraunt()
+                getRestaraunt()
             }
             else if(userInput == "Transportation"){
-                gettransport()
+                getTransport()
             }
             else if(userInput == "Entertainment"){
                 getallWorkAndNoPlay()
             }
-            break userInput;}
+            userInput;}
             
     
 
@@ -82,10 +87,10 @@ function tripConformation()
 {
 userInput = prompt("Would you like to see an itenarary of your scheduled plans? If so, enter Yes into the text box below. If not, enter No into the box below to exit the program.");
 let decision = ["No", "Yes"];
-            if(userInput == "No"){
+            if(userInput == "Yes"){
                         itenararyDisplay()
                 }
-                    else if(userInput == "Yes"){
+                    else if(userInput == "No"){
                         alert("Thank you for choosing devCodeCamp Travel Services! Goodbye! ;-)")
                 }
             }
@@ -95,12 +100,15 @@ let decision = ["No", "Yes"];
 function itenararyDisplay()
 {
    alert("This is your current scheduled trip selection");
-       console.logresult(getdestination,getrestaraunt, gettransport, getallWorkAndNoPlay)}
-       
+      console.log(getDestination["place"]);
+      console.log(getRestaraunt["restaraunt"]);
+      console.log(getTransport["transport"]);
+      console.log(getallWorkAndNoPlay["allWorkAndNoPlay"]);
+}
      
-getdestination();
-getrestaraunt();
-gettransport();
+getDestination();
+getRestaraunt();
+getTransport();
 getallWorkAndNoPlay();
 repickItem();
-choicesChoices()
+choicesChoices();
